@@ -167,17 +167,12 @@
                         </button>
                     </div>
                     <select class="week-dropdown" id="weekDropdown">
-                        <option value="1">Week 1</option>
-                        <option value="2">Week 2</option>
-                        <!-- More weeks would be listed here -->
-                        <option value="28" selected>Week 28</option>
-                        <!-- More weeks would be listed here -->
-                        <option value="40">Week 40</option>
+                        <!-- Week options will be dynamically generated -->
                     </select>
                 </div>
                 
                 <div class="trimester-progress">
-                    <h3>Third Trimester</h3>
+                    <h3 id="trimesterTitle">Third Trimester</h3>
                     <div class="progress-bar-container">
                         <div class="progress-bar-fill" style="width: 70%;"></div>
                     </div>
@@ -199,92 +194,46 @@
                 <div class="tab-content active" id="baby">
                     <div class="baby-development">
                         <div class="baby-illustration">
-                            <img src="/api/placeholder/250/250" alt="Baby at week 28">
+                            <img id="baby-image" src="/api/placeholder/250/250" alt="Baby at week 28">
                         </div>
                         <div class="baby-details">
-                            <h3>Your Baby at Week 28</h3>
-                            <p>Your baby is now the size of an eggplant. They can blink their eyes, which now have lashes. Their brain is developing rapidly, and they're beginning to regulate their own body temperature. They can also hiccup, which you might feel as small rhythmic movements.</p>
+                            <h3 id="baby-title">Your Baby at Week 28</h3>
+                            <p id="baby-description"></p>
                             
                             <div class="baby-stats">
                                 <div class="stat-item">
-                                    <div class="stat-value">2.2 lbs</div>
+                                    <div class="stat-value" id="baby-weight">2.2 lbs</div>
                                     <div class="stat-label">Weight</div>
                                 </div>
                                 <div class="stat-item">
-                                    <div class="stat-value">14.8 in</div>
+                                    <div class="stat-value" id="baby-length">14.8 in</div>
                                     <div class="stat-label">Length</div>
                                 </div>
                                 <div class="stat-item">
-                                    <div class="stat-value">Eggplant</div>
+                                    <div class="stat-value" id="baby-size">Eggplant</div>
                                     <div class="stat-label">Size</div>
                                 </div>
                                 <div class="stat-item">
-                                    <div class="stat-value">Developing</div>
-                                    <div class="stat-label">Hearing</div>
+                                    <div class="stat-value" id="baby-development">Developing</div>
+                                    <div class="stat-label">Development</div>
                                 </div>
                             </div>
                         </div>
                     </div>
                     
                     <h3>What's Happening This Week</h3>
-                    <p>Your baby is putting on weight and developing more fat. Their lungs are maturing and preparing to breathe air after birth. Their eyes can now open and close, and they're developing a sense of sight. The brain is growing rapidly, forming billions of neurons. Your baby might be settling into a sleeping pattern, with periods of wakefulness and sleep.</p>
+                    <p id="baby-details-extended"></p>
                 </div>
                 
                 <!-- Mom's Changes Tab -->
                 <div class="tab-content" id="mom">
                     <div class="mom-changes">
-                        <h3>Your Body at Week 28</h3>
-                        <p>You're now in your third trimester! Your uterus has expanded significantly and is likely putting pressure on your organs, which can cause some discomfort. You may notice more Braxton Hicks contractions as your body prepares for labor. Your growing baby might be causing backaches and making it harder to find a comfortable sleeping position.</p>
+                        <h3 id="mom-title">Your Body at Week 28</h3>
+                        <p id="mom-description"></p>
                         
-                        <h3>Common Symptoms at 28 Weeks</h3>
-                        <div class="symptoms-grid">
-                            <div class="symptom-item">
-                                <div class="symptom-icon">
-                                    <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-                                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M13 10V3L4 14h7v7l9-11h-7z" />
-                                    </svg>
-                                </div>
-                                <div class="symptom-text">
-                                    <div class="symptom-name">Shortness of Breath</div>
-                                    <div class="symptom-description">Your expanding uterus is pressing on your diaphragm, making it harder to take deep breaths.</div>
-                                </div>
-                            </div>
-                            
-                            <div class="symptom-item">
-                                <div class="symptom-icon">
-                                    <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-                                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M18.364 18.364A9 9 0 005.636 5.636m12.728 12.728A9 9 0 015.636 5.636m12.728 12.728L5.636 5.636" />
-                                    </svg>
-                                </div>
-                                <div class="symptom-text">
-                                    <div class="symptom-name">Backaches</div>
-                                    <div class="symptom-description">The weight of your growing baby puts strain on your back muscles.</div>
-                                </div>
-                            </div>
-                            
-                            <div class="symptom-item">
-                                <div class="symptom-icon">
-                                    <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-                                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M14.828 14.828a4 4 0 01-5.656 0M9 10h.01M15 10h.01M21 12a9 9 0 11-18 0 9 9 0 0118 0z" />
-                                    </svg>
-                                </div>
-                                <div class="symptom-text">
-                                    <div class="symptom-name">Leg Cramps</div>
-                                    <div class="symptom-description">You may experience more cramping in your calves, especially at night.</div>
-                                </div>
-                            </div>
-                            
-                            <div class="symptom-item">
-                                <div class="symptom-icon">
-                                    <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-                                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 15a4 4 0 004 4h9a5 5 0 010-10H5a7 7 0 017-7" />
-                                    </svg>
-                                </div>
-                                <div class="symptom-text">
-                                    <div class="symptom-name">Braxton Hicks</div>
-                                    <div class="symptom-description">These practice contractions help prepare your body for labor.</div>
-                                </div>
-                            </div>
+                        <h3>Common Symptoms at <span id="symptoms-week">28</span> Weeks</h3>
+                        <div class="symptoms-grid" id="symptoms-container">
+                            <!-- Symptoms will be dynamically generated -->
                         </div>
                     </div>
                 </div>
@@ -292,45 +241,11 @@
                 <!-- Nutrition & Tips Tab -->
                 <div class="tab-content" id="tips">
                     <div class="nutrition-tips">
-                        <h3>Nutrition Tips for Week 28</h3>
-                        <p>Your baby is growing rapidly now, and your nutritional needs are higher than ever. Focus on protein, iron, calcium, and omega-3 fatty acids. Stay hydrated and continue taking your prenatal vitamins.</p>
+                        <h3 id="nutrition-title">Nutrition Tips for Week 28</h3>
+                        <p id="nutrition-intro"></p>
                         
-                        <div class="tip-list">
-                            <div class="tip-item">
-                                <div class="tip-icon">
-                                    <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-                                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7" />
-                                    </svg>
-                                </div>
-                                <div class="tip-content">
-                                    <div class="tip-title">Increase Iron Intake</div>
-                                    <div class="tip-description">Iron-deficiency anemia is common during pregnancy. Eat iron-rich foods like lean red meat, spinach, and beans. Pair with vitamin C to enhance absorption.</div>
-                                </div>
-                            </div>
-                            
-                            <div class="tip-item">
-                                <div class="tip-icon">
-                                    <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-                                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7" />
-                                    </svg>
-                                </div>
-                                <div class="tip-content">
-                                    <div class="tip-title">Omega-3 Fatty Acids</div>
-                                    <div class="tip-description">Essential for your baby's brain development. Include sources like salmon, chia seeds, and walnuts in your diet.</div>
-                                </div>
-                            </div>
-                            
-                            <div class="tip-item">
-                                <div class="tip-icon">
-                                    <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-                                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7" />
-                                    </svg>
-                                </div>
-                                <div class="tip-content">
-                                    <div class="tip-title">Stay Hydrated</div>
-                                    <div class="tip-description">Proper hydration helps prevent constipation, urinary tract infections, and preterm labor. Aim for 8-10 glasses of water daily.</div>
-                                </div>
-                            </div>
+                        <div class="tip-list" id="nutrition-tips-container">
+                            <!-- Nutrition tips will be dynamically generated -->
                         </div>
                     </div>
                 </div>
@@ -338,57 +253,11 @@
                 <!-- To-Do List Tab -->
                 <div class="tab-content" id="todo">
                     <div class="to-do-list">
-                        <h3>Your 28-Week Checklist</h3>
-                        <p>As you enter your third trimester, there are some important tasks to consider for preparing for your baby's arrival.</p>
+                        <h3 id="todo-title">Your 28-Week Checklist</h3>
+                        <p id="todo-intro">As you progress through your pregnancy, here are some important tasks to consider.</p>
                         
-                        <div class="todo-list">
-                            <div class="todo-item">
-                                <div class="todo-icon">
-                                    <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-                                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z" />
-                                    </svg>
-                                </div>
-                                <div class="todo-content">
-                                    <div class="todo-title">Start Your Birth Plan</div>
-                                    <div class="todo-description">Begin thinking about your preferences for labor and delivery. Discuss options with your healthcare provider and partner.</div>
-                                </div>
-                            </div>
-                            
-                            <div class="todo-item">
-                                <div class="todo-icon">
-                                    <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-                                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z" />
-                                    </svg>
-                                </div>
-                                <div class="todo-content">
-                                    <div class="todo-title">Register for Childbirth Classes</div>
-                                    <div class="todo-description">Sign up for childbirth education classes. They typically last 6-8 weeks, so now is a good time to start.</div>
-                                </div>
-                            </div>
-                            
-                            <div class="todo-item">
-                                <div class="todo-icon">
-                                    <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-                                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z" />
-                                    </svg>
-                                </div>
-                                <div class="todo-content">
-                                    <div class="todo-title">Research Pediatricians</div>
-                                    <div class="todo-description">Begin looking for a pediatrician for your baby. Ask for recommendations and schedule interviews.</div>
-                                </div>
-                            </div>
-                            
-                            <div class="todo-item">
-                                <div class="todo-icon">
-                                    <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-                                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z" />
-                                    </svg>
-                                </div>
-                                <div class="todo-content">
-                                    <div class="todo-title">Start Baby Shopping</div>
-                                    <div class="todo-description">Begin purchasing essential items for your baby. Don't forget to use our Discount Map to save on your purchases!</div>
-                                </div>
-                            </div>
+                        <div class="todo-list" id="todo-container">
+                            <!-- Todo items will be dynamically generated -->
                         </div>
                     </div>
                 </div>
@@ -396,8 +265,8 @@
         </div>
     </div>
 
+    <script src="../data/pregnancyData.js"></script>
     <script>
-
 document.addEventListener('DOMContentLoaded', function() {
     // Mobile menu toggle
     const sidebar = document.getElementById('sidebar');
@@ -431,11 +300,20 @@ document.addEventListener('DOMContentLoaded', function() {
         });
     });
     
-    // Week navigation
+    // Week navigation and dropdown initialization
     const prevWeekBtn = document.getElementById('prevWeek');
     const nextWeekBtn = document.getElementById('nextWeek');
     const currentWeekElement = document.querySelector('.current-week');
     const weekDropdown = document.getElementById('weekDropdown');
+    
+    // Populate week dropdown
+    for (let i = 1; i <= 42; i++) {
+        const option = document.createElement('option');
+        option.value = i;
+        option.textContent = `Week ${i}`;
+        if (i === 28) option.selected = true; // Default selected week
+        weekDropdown.appendChild(option);
+    }
     
     let currentWeek = 28;
     
@@ -452,20 +330,20 @@ document.addEventListener('DOMContentLoaded', function() {
             prevWeekBtn.disabled = true;
         }
         
-        // Enable next button as we're no longer at week 40
+        // Enable next button as we're no longer at week 42
         nextWeekBtn.disabled = false;
     });
     
     nextWeekBtn.addEventListener('click', function() {
-        if (currentWeek < 40) {
+        if (currentWeek < 42) {
             currentWeek++;
             updateWeekDisplay();
             updateProgressBar();
             fetchWeekData(currentWeek);
         }
         
-        // Disable button if we reach week 40
-        if (currentWeek === 40) {
+        // Disable button if we reach week 42
+        if (currentWeek === 42) {
             nextWeekBtn.disabled = true;
         }
         
@@ -481,17 +359,27 @@ document.addEventListener('DOMContentLoaded', function() {
         
         // Update button states
         prevWeekBtn.disabled = (currentWeek === 1);
-        nextWeekBtn.disabled = (currentWeek === 40);
+        nextWeekBtn.disabled = (currentWeek === 42);
     });
     
     function updateWeekDisplay() {
         currentWeekElement.textContent = `Week ${currentWeek}`;
         weekDropdown.value = currentWeek;
+        
+        // Update user status in sidebar
+        document.querySelector('.user-status').textContent = `${currentWeek} weeks pregnant`;
+        
+        // Update title references
+        document.getElementById('baby-title').textContent = `Your Baby at Week ${currentWeek}`;
+        document.getElementById('mom-title').textContent = `Your Body at Week ${currentWeek}`;
+        document.getElementById('nutrition-title').textContent = `Nutrition Tips for Week ${currentWeek}`;
+        document.getElementById('todo-title').textContent = `Your ${currentWeek}-Week Checklist`;
+        document.getElementById('symptoms-week').textContent = currentWeek;
     }
     
     function updateProgressBar() {
         // Calculate pregnancy progress as percentage
-        const progressPercentage = (currentWeek / 40) * 100;
+        const progressPercentage = Math.min((currentWeek / 40) * 100, 100);
         const progressBar = document.querySelector('.progress-bar-fill');
         progressBar.style.width = `${progressPercentage}%`;
         
@@ -499,43 +387,138 @@ document.addEventListener('DOMContentLoaded', function() {
         const trimesterLabels = document.querySelectorAll('.trimester-label');
         trimesterLabels.forEach(label => label.classList.remove('active'));
         
+        let trimesterTitle = '';
         let trimesterIndex = 0;
-        if (currentWeek > 27) {
+        
+        if (currentWeek >= 28) {
             trimesterIndex = 2; // Third trimester
-            document.querySelector('h3').textContent = 'Third Trimester';
-        } else if (currentWeek > 13) {
+            trimesterTitle = 'Third Trimester';
+        } else if (currentWeek >= 14) {
             trimesterIndex = 1; // Second trimester
-            document.querySelector('h3').textContent = 'Second Trimester';
+            trimesterTitle = 'Second Trimester';
         } else {
             trimesterIndex = 0; // First trimester
-            document.querySelector('h3').textContent = 'First Trimester';
+            trimesterTitle = 'First Trimester';
         }
         
+        document.getElementById('trimesterTitle').textContent = trimesterTitle;
         trimesterLabels[trimesterIndex].classList.add('active');
     }
     
-    // This function would fetch data for the specified week
-    // In a real application, this would likely call an API
+    // This function fetches data for the specified week from pregnancyData.js
     function fetchWeekData(week) {
-        console.log(`Fetching data for week ${week}`);
+        // Get data for the current week
+        const weekData = pregnancyData.getWeekData(week);
         
-        // For demonstration, we'll just update the week number in the content
-        document.querySelectorAll('h3').forEach(h3 => {
-            if (h3.textContent.includes('Week')) {
-                h3.textContent = h3.textContent.replace(/Week \d+/, `Week ${week}`);
-            }
-            if (h3.textContent.includes('Weeks')) {
-                h3.textContent = h3.textContent.replace(/\d+ Weeks/, `${week} Weeks`);
-            }
+        if (!weekData) {
+            console.error(`No data available for week ${week}`);
+            return;
+        }
+        
+        // Update baby tab content
+        document.getElementById('baby-description').textContent = weekData.babyDevelopment;
+        document.getElementById('baby-details-extended').textContent = weekData.babyDevelopment;
+        document.getElementById('baby-size').textContent = weekData.babySize.split('(')[1].replace(')', '') || 'Growing';
+        document.getElementById('baby-image').alt = `Baby at week ${week}`;
+        
+        // Calculate approximate weight and length based on week (simplified approximation)
+        let weight, length, development;
+        if (week <= 12) {
+            weight = "< 1 oz";
+            length = "< 3 in";
+            development = "Forming";
+        } else if (week <= 27) {
+            weight = `${((week-12) * 0.25).toFixed(1)} lbs`;
+            length = `${9 + ((week-12) * 0.5).toFixed(1)} in`;
+            development = "Growing";
+        } else {
+            weight = `${2 + ((week-28) * 0.25).toFixed(1)} lbs`;
+            length = `${15 + ((week-28) * 0.25).toFixed(1)} in`;
+            development = "Maturing";
+        }
+        
+        document.getElementById('baby-weight').textContent = weight;
+        document.getElementById('baby-length').textContent = length;
+        document.getElementById('baby-development').textContent = development;
+        
+        // Update mom's changes tab content
+        document.getElementById('mom-description').textContent = weekData.maternalChanges;
+        
+        // Update symptoms
+        const symptomsContainer = document.getElementById('symptoms-container');
+        symptomsContainer.innerHTML = '';
+        
+        weekData.commonSymptoms.forEach(symptom => {
+            const symptomItem = document.createElement('div');
+            symptomItem.className = 'symptom-item';
+            symptomItem.innerHTML = `
+                <div class="symptom-icon">
+                    <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M13 10V3L4 14h7v7l9-11h-7z" />
+                    </svg>
+                </div>
+                <div class="symptom-text">
+                    <div class="symptom-name">${symptom.split(' - ')[0] || symptom}</div>
+                    <div class="symptom-description">${symptom.split(' - ')[1] || 'Common symptom during this stage of pregnancy.'}</div>
+                </div>
+            `;
+            symptomsContainer.appendChild(symptomItem);
         });
         
-        // In a real application, you would update all the content based on the week
-        // This could include baby size, development info, symptoms, tips, etc.
+        // Update nutrition tips
+        document.getElementById('nutrition-intro').textContent = 'Focus on these nutritional recommendations for a healthy pregnancy:';
+        
+        const nutritionContainer = document.getElementById('nutrition-tips-container');
+        nutritionContainer.innerHTML = '';
+        
+        weekData.nutritionTips.forEach(tip => {
+            const tipItem = document.createElement('div');
+            tipItem.className = 'tip-item';
+            tipItem.innerHTML = `
+                <div class="tip-icon">
+                    <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7" />
+                    </svg>
+                </div>
+                <div class="tip-content">
+                    <div class="tip-title">${tip.split(":")[0] || 'Nutrition Tip'}</div>
+                    <div class="tip-description">${tip.split(":")[1] || tip}</div>
+                </div>
+            `;
+            nutritionContainer.appendChild(tipItem);
+        });
+        
+        // Update to-do list
+        const todoContainer = document.getElementById('todo-container');
+        todoContainer.innerHTML = '';
+        
+        weekData.toDoThisWeek.forEach(todo => {
+            const todoItem = document.createElement('div');
+            todoItem.className = 'todo-item';
+            todoItem.innerHTML = `
+                <div class="todo-icon">
+                    <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z" />
+                    </svg>
+                </div>
+                <div class="todo-content">
+                    <div class="todo-title">${todo.split(":")[0] || todo}</div>
+                    <div class="todo-description">${todo.split(":")[1] || 'Important task for this week of pregnancy.'}</div>
+                </div>
+            `;
+            todoContainer.appendChild(todoItem);
+        });
     }
+
+    // Initialize the tracker with the starting week
+    fetchWeekData(currentWeek);
+    updateWeekDisplay();
+    updateProgressBar();
 
     // Initialize button states
     prevWeekBtn.disabled = (currentWeek === 1);
-    nextWeekBtn.disabled = (currentWeek === 40);
+    nextWeekBtn.disabled = (currentWeek === 42);
 });
-
     </script>
+</body>
+</html>
