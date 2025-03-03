@@ -1,0 +1,26 @@
+{
+  "name": "momconnect-prototype",
+  "version": "1.0.0",
+  "description": "A prototype for the MomConnect pregnancy tracking application",
+  "main": "app.js",
+  "scripts": {
+    "start": "node app.js",
+    "dev": "nodemon app.js"
+  },
+  "keywords": [
+    "pregnancy",
+    "health",
+    "tracking",
+    "mothers"
+  ],
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "body-parser": "^1.20.2",
+    "express": "^4.18.2",
+    "express-session": "^1.17.3"
+  },
+  "devDependencies": {
+    "nodemon": "^3.0.3"
+  }
+}
